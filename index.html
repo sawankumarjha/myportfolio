@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <!--Navigation Section-->
+        <nav class="navigation">
+            <div class="navRight"><img id="logo" src="logo2.png" alt="Not Found" srcset=""></div>
+            <div class="navLeft">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" id="bar"></i>
+            </div>
+        </nav>
+        <!-- Navigation Menu -->
+        <ul id="navMenu">
+            <i class="fa fa-times fa-2x" aria-hidden="true" id="close"></i>
+            <a href="#" id="activeNav">Home</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Testimonial.html">Testimonial</a>
+            <a href="Contact.html">Contact</a>
+        </ul>
+        <!-- ***********Poster************* -->
+        <section id="poster">
+            <div id="posterLeft">
+                <h3>Hello</h3>
+                <h1>I'm Sawan Kumar Jha</h1>
+                <h3>Web Developer & Designer</h3>
+                <div id="posterIcon">
+                    <a href="https://m.facebook.com/sawan.jha.7568"> <i class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/sawan.jha.7568/?hl=en"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/sk-j-449b18198/"><i class="fa fa-linkedin"
+                            aria-hidden="true"></i></a>
+                    <a href="https://mobile.twitter.com/SawanKumarJha18"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                </div>
+                <a href="About.html">More About Me</a>
+            </div>
+            <div id="posterRight">
+                <div id="posterImgDiv">
+                    <img src="myImg.png" alt="">
+                </div>
+
+
+                <a href="Resume.docx" id="downloadResume">Download Resume</a>
+            </div>
+        </section>
+        <footer>
+            <h3><i class="fa fa-copyright" aria-hidden="true"></i> <span id="cdate"></span> All right Reserved</h3>
+        </footer>
+        <!-- /******Script*******/ -->
+        <script>
+            $(document).ready(function () {
+                footerDate = new Date();
+                document.getElementById('cdate').innerHTML = footerDate.getFullYear();
+                $('#bar').click(() => {
+                    $('#navMenu').css('display', 'flex');
+
+                });
+                $('#close').click(() => {
+                    $('#navMenu').css('display', 'none');
+                });
+            });
+        </script>
+    </body>
+
+</html>

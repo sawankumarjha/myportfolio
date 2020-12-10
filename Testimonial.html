@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Testimonial</title>
+    </head>
+
+    <body>
+
+        <!--Navigation Section-->
+        <nav class="navigation">
+            <div class="navRight"><img id="logo" src="logo2.png" alt="Not Found" srcset=""></div>
+            <div class="navLeft">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" id="bar"></i>
+            </div>
+        </nav>
+        <!-- Navigation Menu -->
+        <ul id="navMenu">
+            <i class="fa fa-times fa-2x" aria-hidden="true" id="close"></i>
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="#" id="activeNav">Testimonial</a>
+            <a href="Contact.html">Contact</a>
+        </ul>
+
+        <!-- /***********Services*****************/ -->
+        <h3 class="testimonialHeading" id="testimonialInfo">Testimonial</h3>
+        <h1 class="testimonialHeading">Client Speak</h1>
+
+        <section class="testimonial" id="testimonial">
+
+
+        </section>
+
+
+        <footer>
+            <h3><i class="fa fa-copyright" aria-hidden="true"></i> <span id="cdate"></span> All right Reserved</h3>
+        </footer>
+        <!-- /******Script*******/ -->
+        <script>
+            $(document).ready(function () {
+
+                footerDate = new Date();
+                document.getElementById('cdate').innerHTML = footerDate.getFullYear();
+                $('#bar').click(() => {
+                    $('#navMenu').css('display', 'flex');
+
+                });
+                $('#close').click(() => {
+                    $('#navMenu').css('display', 'none');
+                });
+                // /************Testmonial Script**********
+                let testimonial = document.getElementById('testimonial');
+                let quotes = [`Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae dicta animi ea
+                    reiciendis doloremque facere totam alias, ratione veniam.`,
+                    `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae dicta animi ea
+                    reiciendis`,
+                    `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae dicta animi ea
+                    reiciendis doloremque facere totam alias, ratione veniam.`,
+                    `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae dicta animi ea
+                    reiciendis`,
+                    `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestiae dicta animi ea
+                    reiciendis doloremque facere totam alias, ratione veniam.`];
+
+                let names = ['Rohan Sharma', 'Raman kumar', 'Abhi', 'Gaurav', 'Aman'];
+                let humanImg = ['human1.png', 'human2.png', 'human3.png', 'human1.png', 'human2.png'];
+
+                for (let i = 0; i < quotes.length; i++) {
+                    testimonial.innerHTML += `<div>
+                        <img src=${humanImg[i]}  alt="NotFound" srcset="">
+                            <h2>${names[i]}</h2>
+                            <q>${quotes[i]}</q>
+                         </div>`
+                }
+            });
+        </script>
+    </body>
+
+</html>

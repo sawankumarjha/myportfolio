@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Portfolio</title>
+
+    </head>
+
+    <body>
+
+        <!--Navigation Section-->
+        <nav class="navigation">
+            <div class="navRight"><img id="logo" src="logo2.png" alt="Not Found" srcset=""></div>
+            <div class="navLeft">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" id="bar"></i>
+            </div>
+        </nav>
+        <!-- Navigation Menu -->
+        <ul id="navMenu">
+            <i class="fa fa-times fa-2x" aria-hidden="true" id="close"></i>
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="#" id="activeNav">Portfolio</a>
+            <a href="Testimonial.html">Testimonial</a>
+            <a href="Contact.html">Contact</a>
+        </ul>
+
+        <!-- /***********Services*****************/ -->
+
+        <h3 class="portfolioHeading" id="portfolioInfo">Portfolio</h3>
+        <h1 class="portfolioHeading">Latest Works</h1>
+        <div class="navigatePortfolio">
+            <!-- <a id="allBtn">All</a> -->
+
+            <a id="allBtn">All</a>
+            <a id="webBtn">Web Application</a>
+            <a id="javaBtn">Java Swing Application</a>
+            <a id="pythonBtn">Python Application</a>
+
+        </div>
+
+        <!-- Web Application -->
+        <section class="portfolio" id="webPortfolio">
+            <div id="portfolio1" class="portfolioDiv">
+                <img src="portfolio1.png" alt="Not Found">
+                <h3>E-Learning Platform</h3>
+            </div>
+            <div id="portfolio2" class="portfolioDiv">
+                <img src="portfolio2png.png" alt="Not Found">
+                <h3>Foody Website</h3>
+
+            </div>
+            <div id="portfolio3" class="portfolioDiv">
+                <img src="portfolio3.png" alt="Not Found">
+                <h3>Learning Website</h3>
+            </div>
+            <div id="portfolio4" class="portfolioDiv">
+                <img src="portfolio4.png" alt="Not Found">
+                <h3>Blogger Website</h3>
+            </div>
+            <div id="portfolio5" class="portfolioDiv">
+                <img src="portfolio5.png" alt="Not Found">
+                <h3>Portfolio Website</h3>
+
+            </div>
+            <div id="portfolio12" class="portfolioDiv">
+                <img src="myPortfolio1.png" alt="Not Found">
+                <h3>My Portfolio Website</h3>
+            </div>
+            <div id="portfolio13" class="portfolioDiv">
+                <img src="netflix.png" alt="Not Found">
+                <h3>Netflix CLone</h3>
+            </div>
+            <div id="portfolio14" class="portfolioDiv">
+                <img src="foodyRweb.png" alt="Not Found">
+                <h3>FoodyWeb</h3>
+            </div>
+            <div id="portfolio15" class="portfolioDiv">
+                <img src="google1.png" alt="Not Found">
+                <h3>Google Clone</h3>
+            </div>
+        </section>
+
+        <!-- Java Application -->
+        <section class="portfolio" id="javaPortfolio">
+            <div id="portfolio6" class="portfolioDiv">
+                <img src="portfolio6.png" alt="Not Found">
+                <h3>Simple Banking App</h3>
+            </div>
+            <div id="portfolio7" class="portfolioDiv">
+                <img src="portfolio7.png" alt="Not Found">
+                <h3>Note Book App</h3>
+
+            </div>
+            <div id="portfolio8" class="portfolioDiv">
+                <img src="portfolio8.png" alt="Not Found">
+                <h3>Notepad App</h3>
+            </div>
+            <div id="portfolio9" class="portfolioDiv">
+                <img src="portfolio9.png" alt="Not Found">
+                <h3>KBC App</h3>
+            </div>
+            <div id="portfolio10" class="portfolioDiv">
+                <img src="Portfolio10.png" alt="Not Found">
+                <h3>Resturant App</h3>
+
+            </div>
+            <div id="portfolio11" class="portfolioDiv">
+                <img src="portfolio11.png" alt="Not Found">
+                <h3>Guessing Game App</h3>
+            </div>
+        </section>
+        <!-- Python Application -->
+        <section class="portfolio" id="pythonPortfolio">
+            <div id="portfolio16" class="portfolioDiv">
+                <img src="CovidPython1.PNG" alt="Not Found">
+                <h3>Covid Application</h3>
+            </div>
+        </section>
+
+
+
+        <!-- /************Navigation Project*********** -->
+
+
+
+        <!--**************POPUP******************-->
+        <section class="popupPortfolio" id="projectPortfolio">
+
+
+        </section>
+
+
+
+
+        <footer>
+            <h3><i class="fa fa-copyright" aria-hidden="true"></i> <span id="cdate"></span> All right Reserved
+            </h3>
+        </footer>
+        <!-- /******Script*******/ -->
+        <script>
+            $(document).ready(function () {
+
+
+                //*********************Sequence Mustbe Same for Popup
+
+                let popupPortfolio = document.getElementById('projectPortfolio');
+                //Project Image Array
+                let portImage = [{
+                    page1: 'E-learning1.png',
+                    page2: 'E-learning2.png',
+                    page3: 'E-learning3.png',
+                    page4: 'E-learning4.png',
+                    page5: 'E-learning5.png',
+                    page6: 'E-learning6.png',
+                    page7: 'E-learning7.png'
+
+                },
+                { page1: 'foodyWeb.png' },
+                { page1: 'icoder.png' },
+                { page1: 'bloggerWeb.png' },
+                { page1: 'skillPortfolio.png' },
+                { page1: 'portfolio6.png' },
+                { page1: 'portfolio7.png' },
+                { page1: 'portfolio8.png' },
+                { page1: 'portfolio9.png' },
+                { page1: 'portfolio10.png' },
+                { page1: 'portfolio11.png' },
+                {
+                    page1: 'myPortfolio1.png',
+                    page2: 'myPortfolio2.png',
+                    page3: 'myPortfolio3.png',
+                    page4: 'myPortfolio4.png',
+                    page5: 'myPortfolio5.png',
+                    page6: 'myPortfolio6.png'
+                },
+                {
+                    page1: 'NetflixWeb.png'
+                },
+                {
+                    page1: 'foodyReact1.png',
+                    page2: 'foodyReact2.png',
+                    page3: 'foodyReact3.png',
+                    page4: 'foodyReact4.png'
+                },
+                {
+                    page1: 'google1.png',
+                    page2: 'google2.png'
+                },
+                {
+                    page1: 'CovidPython1.png',
+                    page2: 'CovidPython2.png',
+                    page3: 'CovidPython3.png'
+                },
+
+                ];
+
+
+
+                //Project Name Array
+                let projetName = [
+                    'E-learning Academic Project',
+                    'FoodyWeb',
+                    'Icoder Website',
+                    'Blooger Website',
+                    'Portfolio',
+                    'Simple Banking App',
+                    'Note Book App',
+                    'Notepad App',
+                    'KBC App',
+                    'Resturant App',
+                    'Guessing Game App',
+                    'My Portfolio Website',
+                    'Netflix Clone',
+                    'FoodyWeb',
+                    'Google Clone',
+                    'Covid Application'
+
+                ];
+                //Category
+                let CategoryNames = [
+                    "Web Application",
+                    "Web Application",
+                    "Web Application",
+                    "Web Application",
+                    "Web Application",
+                    "Java Swing Application",
+                    "Java Swing Application",
+                    "Java Swing Application",
+                    "Java Swing Application",
+                    "Java Swing Application",
+                    "Java Swing Application",
+                    "Web Application",
+                    "Web Application",
+                    "Web Application",
+                    "Web Application",
+                    "Python Application"
+
+                ];
+
+                //Project Made Details Array
+                let projectInfo = [
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'HTML,CSS,Javascript,Jquery',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'HTML,CSS,Javascript,Jquery',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'HTML,CSS,Javascript,Jquery',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'HTML,CSS,Javascript,Jquery',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'HTML,CSS,Javascript,Jquery',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2019',
+                        Client: 'none',
+                        Tools: 'Java Swing',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2019',
+                        Client: 'none',
+                        Tools: 'Java Swing',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'Java Swing',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2019',
+                        Client: 'none',
+                        Tools: 'Java Swing',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2018',
+                        Client: 'none',
+                        Tools: 'Java Swing',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'Java Swing',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'HTML,CSS,Javascript,Jquery',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'React Js',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'React Js',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'React Js',
+                        Web: 'none'
+                    },
+                    {
+                        Date: '2020',
+                        Client: 'none',
+                        Tools: 'Python Application',
+                        Web: 'none'
+                    }
+
+                ];
+                //Project Details Array
+                let projectDetails = [
+                    `The main objective of this project to provide the accessibilty of the Notes , video lecturer to each and every polythenic department student and for the awarness we also include Covid Section`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`,
+                    `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro reiciendis illo consequuntur earum veniam rem odit dolorum natus a autem.`
+                ];
+
+
+
+
+                function addEvent(index) {
+
+                    popupPortfolio.innerHTML = `  <h1 id="porjectName">${projetName[index]}</h1>
+                        <small id="projectCategory">Category : ${CategoryNames[index]}</small>
+                 <div class="projectDetails" id="projectDetails">
+                <div class="projectDetailsLeft">
+                    <h3>Proeject Brief : </h3>
+                    <p>
+                        ${projectDetails[index]}
+                    </p>
+                </div>
+                <div class="projectDetailsRight">
+                    <h3>Project Info :</h3>
+                    <li>Date : ${projectInfo[index].Date}</li>
+                    <li>Client : ${projectInfo[index].Client}</li>
+                    <li>Tools : ${projectInfo[index].Tools}</li>
+                    <li>Web : <span id="domain">${projectInfo[index].Web}</span></li>
+                </div>
+
+            </div>
+            <div class="projectDetailsBtn">
+                <a id="projectMinus">Project Details <i class="fa fa-minus" aria-hidden="true"></i></a>
+                <a id="projectPlus">Project Details <i class="fa fa-plus" aria-hidden="true"></i></a>
+                <i class="fa fa-times" aria-hidden="true" id="detailsClose"></i></a>
+            </div>
+            <div class="projectPhoto" id="projectPhoto">
+                <div>
+                        <img src=${portImage[index].page1} alt="" srcset="">
+                        <img src=${portImage[index].page2} alt="" srcset="">
+                        <img src=${portImage[index].page3} alt="" srcset="">
+                        <img src=${portImage[index].page4} alt="" srcset="">
+                        <img src=${portImage[index].page5} alt="" srcset="">
+                        <img src=${portImage[index].page6} alt="" srcset="">
+                        <img src=${portImage[index].page7} alt="" srcset="">
+                        
+                    </div>
+            </div>`
+
+
+
+
+
+                    $('#projectPortfolio').fadeIn(500);
+                    $('#detailsClose').click(() => {
+                        $('#projectPortfolio').fadeOut(500);
+                    });
+
+                    $('#projectMinus').click(() => {
+                        $('#projectDetails').slideUp(1000);
+                        $('#projectMinus').css('display', 'none');
+                        $('#projectPlus').fadeIn();
+                    });
+                    $('#projectPlus').click(() => {
+                        $('#projectDetails').slideDown(1000);
+                        $('#projectPlus').css('display', 'none');
+                        $('#projectMinus').fadeIn();
+                    });
+
+                }
+
+
+
+                $('#portfolio1').click(() => { addEvent(0); });
+                $('#portfolio2').click(() => { addEvent(1); });
+                $('#portfolio3').click(() => { addEvent(2); });
+                $('#portfolio4').click(() => { addEvent(3); });
+                $('#portfolio5').click(() => { addEvent(4); });
+                $('#portfolio6').click(() => { addEvent(5); });
+                $('#portfolio7').click(() => { addEvent(6); });
+                $('#portfolio8').click(() => { addEvent(7); });
+                $('#portfolio9').click(() => { addEvent(8); });
+                $('#portfolio10').click(() => { addEvent(9); });
+                $('#portfolio11').click(() => { addEvent(10); });
+                $('#portfolio12').click(() => { addEvent(11); });
+                $('#portfolio13').click(() => { addEvent(12); });
+                $('#portfolio14').click(() => { addEvent(13); });
+                $('#portfolio15').click(() => { addEvent(14); });
+                $('#portfolio16').click(() => { addEvent(15); });
+
+                //*****************************************************
+
+
+
+
+
+
+                footerDate = new Date();
+                document.getElementById('cdate').innerHTML = footerDate.getFullYear();
+                $('#bar').click(() => {
+                    $('#navMenu').css('display', 'flex');
+
+                });
+                $('#close').click(() => {
+                    $('#navMenu').css('display', 'none');
+                });
+
+
+
+
+
+                // Navigation Function
+                let divLength = document.getElementsByClassName('portfolioDiv').length;
+                $('#allBtn').click(() => {
+                    $('#allBtn').css({
+                        color: '#64b5f6',
+                        boxShadow: '0px 0px 5px 4px #070809eb'
+                    });
+                    $('#javaBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#pythonBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#webBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+
+                    $(`#webPortfolio`).fadeIn(100);
+                    $(`#javaPortfolio`).fadeIn(100);
+                    $(`#pythonPortfolio`).fadeIn(100);
+
+
+
+                });
+                $('#webBtn').click(() => {
+                    $('#webBtn').css({
+                        color: '#64b5f6',
+                        boxShadow: '0px 0px 5px 4px #070809eb'
+                    });
+                    $('#javaBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#pythonBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#allBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+
+                    $(`#webPortfolio`).fadeIn(100);
+                    $(`#javaPortfolio`).fadeOut(100);
+                    $(`#pythonPortfolio`).fadeOut(100);
+
+
+
+                });
+
+                $('#javaBtn').click(() => {
+                    $('#javaBtn').css({
+                        color: '#64b5f6',
+                        boxShadow: '0px 0px 5px 4px #070809eb'
+                    });
+
+                    $('#webBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#pythonBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#allBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+
+                    $(`#webPortfolio`).fadeOut(100);
+                    $(`#javaPortfolio`).fadeIn(100);
+                    $(`#pythonPortfolio`).fadeOut(100);
+                });
+
+                $('#pythonBtn').click(() => {
+                    $('#pythonBtn').css({
+                        color: '#64b5f6',
+                        boxShadow: '0px 0px 5px 4px #070809eb'
+                    });
+
+                    $('#webBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#javaBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+                    $('#allBtn').css({
+                        color: 'white',
+                        boxShadow: 'none'
+                    });
+
+                    $(`#webPortfolio`).fadeOut(100);
+                    $(`#javaPortfolio`).fadeOut(100);
+                    $(`#pythonPortfolio`).fadeIn(100);
+
+                });
+
+
+                //**********************
+
+
+            });
+        </script>
+    </body>
+
+</html>

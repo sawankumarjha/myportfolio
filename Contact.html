@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Contact</title>
+
+    </head>
+
+    <body>
+
+        <!--Navigation Section-->
+        <nav class="navigation">
+            <div class="navRight"><img id="logo" src="logo2.png" alt="Not Found" srcset=""></div>
+            <div class="navLeft">
+                <i class="fa fa-bars fa-2x" aria-hidden="true" id="bar"></i>
+            </div>
+        </nav>
+        <!-- Navigation Menu -->
+        <ul id="navMenu">
+            <i class="fa fa-times fa-2x" aria-hidden="true" id="close"></i>
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="Portfolio.html">Portfolio</a>
+            <a href="Testimonial.html">Testimonial</a>
+            <a href="#" id="activeNav">Contact</a>
+        </ul>
+
+        <!-- /***********Contact*****************/ -->
+        <h3 class="contactHeading" id="contactInfo">Contact</h3>
+        <h1 class="contactHeading">Get in Touch</h1>
+
+        <section class="contact">
+            <div class="contact1">
+                <i class="fa fa-phone fa-2x" aria-hidden="true" id="phone"></i>
+                <h2>Phone No</h2>
+                <h3>+12345678901</h3>
+            </div>
+            <div class="contact2">
+                <i class="fa fa-envelope fa-2x" aria-hidden="true" id="email"></i>
+                <h2>Email</h2>
+                <h3>example@gmail.com</h3>
+
+            </div>
+            <div class="contact3">
+                <i class="fa fa-map-marker fa-2x" aria-hidden="true" id="location"></i>
+                <h2>Address</h2>
+                <h3>kuleshara Greater Noida ,201304</h3>
+            </div>
+
+        </section>
+
+        <form action="" id="contactForm">
+            <div class="formLeft">
+                <input type="text" placeholder="Enter Your Name....." autocomplete="off" required id="name">
+                <input type="email" placeholder="Enter Your Email...." autocomplete="off" required id="Email">
+                <input type="text" placeholder="Enter Your Subject....." autocomplete="off" required id="subject">
+            </div>
+            <div class="formRight">
+                <textarea name="message" placeholder="Enter Your Message....." id="message"></textarea>
+                <input type="reset" value="Reset" class="formBtn">
+                <input type="button" value="Send Message" class="formBtn" id="submitBtn">
+            </div>
+        </form>
+
+
+
+        <div id="confirm">
+            <h2>You want to contact or not ?</h2>
+            <a href="#" id="confirmOk">Ok</a>
+            <a href="#" id="confirmCancel">Cancel</a>
+        </div>
+
+
+
+        <footer>
+            <h3><i class="fa fa-copyright" aria-hidden="true"></i> <span id="cdate"></span> All right Reserved</h3>
+        </footer>
+        <!-- /******Script*******/ -->
+        <script>
+            $(document).ready(function () {
+                footerDate = new Date();
+                document.getElementById('cdate').innerHTML = footerDate.getFullYear();
+                $('#bar').click(() => {
+                    $('#navMenu').css('display', 'flex');
+                });
+                $('#close').click(() => {
+                    $('#navMenu').css('display', 'none');
+                });
+                let Name = document.getElementById('name');
+                let Email = document.getElementById('Email');
+                let Subject = document.getElementById('subject');
+                let Message = document.getElementById('message');
+                $('#submitBtn').click(() => {
+                    let ok = document.getElementById('confirmOk');
+                    ok.href = `mailto:sawanjha2004@gmail.com?subject=${Subject.value}&body=${Message.value}`;
+
+                    $('#confirm').fadeIn(500);
+                })
+                $('#confirmOk').click(() => {
+                    $('#confirm').fadeOut(500);
+                    Name.value = "";
+                    Email.value = "";
+                    Subject.value = "";
+                    Message.value = "";
+                })
+                $('#confirmCancel').click(() => {
+                    $('#confirm').fadeOut(500);
+                    Name.value = "";
+                    Email.value = "";
+                    Subject.value = "";
+                    Message.value = "";
+                })
+
+            });
+        </script>
+    </body>
+
+</html>

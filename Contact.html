@@ -71,11 +71,11 @@
 
 
 
-        <div id="confirm">
+<!--         <div id="confirm">
             <h2>You want to contact or not ?</h2>
             <a href="#" id="confirmOk">Ok</a>
             <a href="#" id="confirmCancel">Cancel</a>
-        </div>
+        </div> -->
 
 
 
@@ -98,27 +98,27 @@
                 let Email = document.getElementById('Email');
                 let Subject = document.getElementById('subject');
                 let Message = document.getElementById('message');
-                $('#submitBtn').click((e) => {
-                    e.preventDefault();
-                    let ok = document.getElementById('confirmOk');
-                    ok.href = `mailto:sawanjha2004@gmail.com?subject=${Subject.value}&body=${Message.value}`;
-                    console.log(ok.href);
-                    $('#confirm').fadeIn(500);
-                })
-                $('#confirmOk').click(() => {
-                    $('#confirm').fadeOut(500);
-                    Name.value = "";
-                    Email.value = "";
-                    Subject.value = "";
-                    Message.value = "";
-                })
-                $('#confirmOk').click(() => {
-                    $('#confirm').fadeOut(500);
-                    Name.value = "";
-                    Email.value = "";
-                    Subject.value = "";
-                    Message.value = "";
-                })
+//                 $('#submitBtn').click((e) => {
+//                     e.preventDefault();
+//                     let ok = document.getElementById('confirmOk');
+//                     ok.href = `mailto:sawanjha2004@gmail.com?subject=${Subject.value}&body=${Message.value}`;
+//                     console.log(ok.href);
+//                     $('#confirm').fadeIn(500);
+//                 })
+//                 $('#confirmOk').click(() => {
+//                     $('#confirm').fadeOut(500);
+//                     Name.value = "";
+//                     Email.value = "";
+//                     Subject.value = "";
+//                     Message.value = "";
+//                 })
+//                 $('#confirmOk').click(() => {
+//                     $('#confirm').fadeOut(500);
+//                     Name.value = "";
+//                     Email.value = "";
+//                     Subject.value = "";
+//                     Message.value = "";
+//                 })
 
             });
         </script>

@@ -65,7 +65,7 @@
             <div class="formRight">
                 <textarea name="message" placeholder="Enter Your Message....." id="message"></textarea>
                 <input type="reset" value="Reset" class="formBtn">
-                <input type="submit" value="Send Message" class="formBtn" id="submitBtn">
+                <input type="button" value="Send Message" class="formBtn" id="submitBtn">
             </div>
         </form>
 
@@ -99,7 +99,6 @@
                 let Subject = document.getElementById('subject');
                 let Message = document.getElementById('message');
                 $('#submitBtn').click((e) => {
-                    e.preventDefault();
                     let ok = document.getElementById('confirmOk');
                     ok.href = `mailto:sawanjha2004@gmail.com?subject=${Subject.value}&body=${Message.value}`;
                 ]

@@ -712,7 +712,8 @@ i {
 /**Confirm******/
 #confirm {
     position: fixed;
-    display: none;
+    display: block
+        ;
     top: 30vh;
     width: 30%;
     margin: 0px 35%;
